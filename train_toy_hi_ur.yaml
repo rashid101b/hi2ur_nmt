@@ -1,0 +1,25 @@
+# toy_en_de.yaml
+
+# Corpus opts:
+data:
+    corpus_1:
+        path_src:  hiur_d/src-train.txt
+        path_tgt:  hiur_d/tgt-train.txt
+    valid:
+        path_src:  hiur_d/src-val.txt
+        path_tgt:  hiur_d/tgt-val.txt
+
+# Vocabulary files that were just created
+src_vocab:  hiur_d/run/example.vocab.src
+tgt_vocab:  hiur_d/run/example.vocab.tgt
+
+# Train on a single GPU
+world_size: 1
+#gpu_ranks: [0]
+
+# Where to save the checkpoints
+save_model:  hiur_d/run/model
+save_checkpoint_steps: 200
+train_steps: 1000
+valid_steps: 100
+
